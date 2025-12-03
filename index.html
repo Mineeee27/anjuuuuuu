@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4 U anjuuu💌</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: #ffd6e0;
+        overflow: hidden;
+    }
+
+    .screen {
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        animation: fade 0.8s ease forwards;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: #d1005a;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: #5a0034;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+    button {
+        margin-top: 25px;
+        padding: 12px 25px;
+        border: none;
+        background: #ff006e;
+        color: white;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #d1005a;
+        transform: scale(1.07);
+    }
+
+    .heart {
+        font-size: 3rem;
+        animation: beat 1.2s infinite;
+        margin-bottom: 10px;
+    }
+
+    @keyframes beat {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For u anjuuu💌</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: #ffd6e0;
+            overflow: hidden;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .floating-heart {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.9;
+            will-change: transform, opacity;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(50px) scale(0.8); opacity: 0; }
+            30% { opacity: 1; }
+            100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+        }
+
+        .sparkle { animation: sparkle 1.5s infinite; }
+        @keyframes sparkle { 0%,100% { text-shadow: 0 0 8px #ff5fa2; } 50% { text-shadow: 0 0 16px #ff006e; } }
+
+        .screen { width: 100vw; height: 100vh; display: none; justify-content: center; align-items: center; flex-direction: column; padding: 20px; text-align: center; animation: fade 0.8s ease forwards; position: relative; z-index: 5; }
+        @keyframes fade { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        h1 { font-size: 2rem; color: #d1005a; }
+        p { font-size: 1.2rem; color: #5a0034; margin-top: 10px; line-height: 1.6; }
+
+        button { margin-top: 25px; padding: 12px 25px; border: none; background: #ff006e; color: white; font-size: 1.1rem; border-radius: 10px; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #d1005a; transform: scale(1.07); }
+
+        .heart { font-size: 3rem; animation: beat 1.2s infinite; margin-bottom: 10px; }
+        @keyframes beat { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+
+        .glow { animation: glowPulse 2s ease-in-out infinite; }
+        @keyframes glowPulse { 0% { text-shadow: 0 0 5px #ff4d88; } 50% { text-shadow: 0 0 18px #ff006e; } 100% { text-shadow: 0 0 5px #ff4d88; } }
+    </style>
+</head>
+<body>
+
+    <div class="floating-hearts" id="floatContainer"></div>
+
+    <!-- Pages (ordered) -->
+    <div id="page1" class="screen" style="display:flex;">
+        <div class="heart sparkle">💖</div>
+        <h1>Welcome kothiii💕</h1>
+        <p>I made something small... something cute... but filled with only one thing — <strong>you</strong>.
+        This letter website is only for you, from my heart 💌</p>
+        <button onclick="next(2)">Next ➜</button>
+    </div>
+
+    <div id="page2" class="screen">
+        <div class="heart sparkle">💞</div>
+        <h1>You’re More Than You Think 💗</h1>
+        <p>You’re a rare blessing… someone I never want to lose.
+        Your presence feels warm, your silence feels safe, and you matter to me more than you will ever know 🌸</p>
+        <button onclick="next(3)">Next ➜</button>
+    </div>
+
+    <div id="page3" class="screen">
+        <div class="heart sparkle">💘</div>
+        <h1>A Letter From My Heart ✨</h1>
+        <p>You are my most important person… My first thought in the morning and the last one at night.
+        You will always be my top priority, no matter what 🌷</p>
+        <button onclick="next(4)">Next ➜</button>
+    </div>
+
+    <div id="page4" class="screen">
+        <div class="heart sparkle">💗</div>
+        <h1>What I Feel… Truly 😌💕</h1>
+        <p>Friends are like passing clouds — they come and go… but <strong>you</strong>… you are permanent.
+        You are my forever person, my constant, the one I never want to lose 💞</p>
+        <button onclick="next(5)">Next ➜</button>
+    </div>
+
+    <div id="page5" class="screen">
+        <div class="heart sparkle">💝</div>
+        <h1>You Mean More Than You Know 💕</h1>
+        <p>I want to be with you for a lifetime… No matter what comes, no matter what happens, I want to hold your hand through everything.
+        Either <strong>you</strong>, or nothing. That's how much you mean to me 💖</p>
+        <button onclick="next(6)">Next ➜</button>
+    </div>
+
+    <div id="page6" class="screen">
+        <div class="heart sparkle">💗</div>
+        <h1>From My Soul… ✨</h1>
+        <p>You are my peace, my happiness, my forever love. You make even the bad days feel light.
+        I never want anyone else — only you, today, tomorrow, lifetime and beyond 💞</p>
+        <button onclick="next(7)">Next ➜</button>
+    </div>
+
+    <div id="page7" class="screen">
+        <div class="heart">💖</div>
+        <h1>The Only One 💕</h1>
+        <p>You’re the only person I can talk to for hours without feeling tired… the only one who makes everything feel easy and comfortable.
+        I just wanted you to know how much you mean to me 🌷</p>
+        <p>The truth is… even if we spend a whole day together, the moment you leave, I miss you in the very next minute.
+        That’s how special you’ve become to me 💞</p>
+        <p>I miss you all the time. I love hearing your voice… and I can look at your face endlessly without getting bored.
+        You bring light into my dark days, and you make me smile even on the bad ones 💖</p>
+        <button onclick="next(8)">Next ➜</button>
+    </div>
+
+    <div id="page8" class="screen">
+        <div class="heart">💗</div>
+        <h1>From Deep Inside My Heart ❤️‍🔥</h1>
+        <p>I want to tell you something honestly… something I usually hide.
+        When it comes to you, I become a little possessive — but not out of insecurity. It's just because you mean so much to me that losing even 1% of your attention scares me.
+        You are not “someone” in my life… you are <strong>the person</strong>. 🩷</p>
+        <button onclick="next(9)">Next ➜</button>
+    </div>
+
+    <div id="page9" class="screen">
+        <div class="heart">💖</div>
+        <h1>The Real Truth… From My Soul ✨</h1>
+        <p>The truth is… I want you in my life forever. Friends, people, phases — they all come and go like passing clouds… but <strong>you</strong>… you are permanent in my heart.
+        I don’t ever want a life where you are not with me. Either <em>you</em>, or nothing. You are my forever choice. ❤️</p>
+        <button onclick="next(10)">Next ➜</button>
+    </div>
+
+    <div id="page10" class="screen">
+        <div class="heart sparkle">💞</div>
+        <h1>And Finally… 💗</h1>
+        <p>Thank you for being in my life. Thank you for being my constant.
+        And thank you for giving me a reason to smile more every day 💖<br /><br />— Yours,<br /><strong>Vinnuuuuuu ❤️</strong></p>
+        <button onclick="restart()">Start Again 🔁</button>
+    </div>
+
+    <script>
+        function showPage(n) {
+            document.querySelectorAll('.screen').forEach(s => s.style.display = 'none');
+            const el = document.getElementById('page' + n);
+            if (el) el.style.display = 'flex';
+        }
+        function next(n) { showPage(n); }
+        function restart() { showPage(1); }
+
+        // Floating hearts generator (single implementation)
+        function createHeart() {
+            const container = document.getElementById('floatContainer');
+            if (!container) return;
+            const heart = document.createElement('span');
+            heart.className = 'floating-heart';
+            heart.textContent = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            const size = 14 + Math.random() * 36;
+            heart.style.fontSize = size + 'px';
+            const dur = 3 + Math.random() * 4;
+            heart.style.animation = `floatUp ${dur}s linear forwards`;
+            container.appendChild(heart);
+            setTimeout(() => heart.remove(), (dur + 0.2) * 1000);
+        }
+        setInterval(createHeart, 450);
+    </script>
+
+</body>
+</html> y not running in vs code
